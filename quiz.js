@@ -17,3 +17,13 @@ function checkAnswer() {
 
 // Step 4: Add event listener to the submit button
 document.getElementById('submit-answer').addEventListener('click', checkAnswer);
+
+if (userAnswer === correctAnswer) {
+    feedbackElement.textContent = "Correct! Well done.";
+    feedbackElement.classList.add('correct');
+    feedbackElement.classList.remove('incorrect');
+} else {
+    feedbackElement.textContent = "That's incorrect. Try again!";
+    feedbackElement.classList.add('incorrect');
+    feedbackElement.classList.remove('correct');
+}
